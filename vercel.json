@@ -1,5 +1,9 @@
 {
-  "outputDirectory": "src/resources",
+  "framework": null,
   "buildCommand": null,
-  "installCommand": null
+  "installCommand": null,
+  "rewrites": [
+    { "source": "/", "destination": "/src/resources/index.html" },
+    { "source": "/:path*", "destination": "/src/resources/:path*" }
+  ]
 }
