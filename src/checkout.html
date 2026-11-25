@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Finalizá tu compra en DoctaTech" />
+    <title>DoctaTech - Finalizar compra</title>
+    <link
+      rel="icon"
+      href="./resources/imagenes/brand/favicon/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      href="./resources/imagenes/brand/favicon/favicon.ico"
+      sizes="any"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./resources/imagenes/brand/favicon/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="./resources/css/estilos.css" />
+    <script type="module" src="./resources/js/checkout.js"></script>
+  </head>
+
+  <body>
+    <header class="encabezado-principal">
+      <a href="index.html">
+        <img
+          class="logo"
+          src="./resources/imagenes/brand/logo/doctatech-logo-fondo-claro.svg"
+          alt="Logo de DoctaTech"
+        />
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navegacion-principal" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="contenido-principal">
+      <section class="seccion" aria-labelledby="titulo-checkout">
+        <h1 id="titulo-checkout">Finalizar compra</h1>
+        <p>
+          Completá tus datos y revisá el resumen. Al confirmar, te enviamos el
+          detalle de tu compra por email.
+        </p>
+      </section>
+
+      <div class="checkout">
+        <section class="seccion" id="seccion-datos" aria-labelledby="titulo-datos">
+          <h2 id="titulo-datos">Tus datos</h2>
+
+          <form id="formulario-checkout" novalidate>
+            <div class="campo">
+              <label for="dni">DNI</label>
+              <input
+                type="text"
+                id="dni"
+                name="dni"
+                inputmode="numeric"
+                autocomplete="off"
+                required
+                aria-describedby="error-dni"
+              />
+              <span class="error-campo" id="error-dni" role="alert"></span>
+            </div>
+
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                autocomplete="name"
+                required
+                aria-describedby="error-nombre"
+              />
+              <span class="error-campo" id="error-nombre" role="alert"></span>
+            </div>
+
+            <div class="campo">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-describedby="error-email"
+              />
+              <span class="error-campo" id="error-email" role="alert"></span>
+            </div>
+
+            <p class="estado-checkout" id="estado-checkout" role="status" aria-live="polite"></p>
+
+            <div class="acciones-checkout">
+              <a class="boton boton-secundario" href="index.html#catalogo">Seguir comprando</a>
+              <button class="boton" type="submit" id="boton-confirmar">
+                Finalizar compra
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="seccion" id="seccion-resumen" aria-labelledby="titulo-resumen">
+          <h2 id="titulo-resumen">Resumen de tu compra</h2>
+
+          <p class="carrito-vacio" id="checkout-vacio" hidden>Tu carrito está vacío.</p>
+
+          <div class="contenedor-tabla-carrito" id="checkout-tabla">
+            <table class="tabla-carrito">
+              <thead>
+                <tr>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Cant.</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody id="checkout-cuerpo"></tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="3" scope="row">Total</th>
+                  <td><strong id="checkout-total">$0</strong></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <section
+        class="seccion"
+        id="confirmacion"
+        tabindex="-1"
+        aria-labelledby="titulo-confirmacion"
+        hidden
+      >
+        <h2 id="titulo-confirmacion">¡Gracias por tu compra!</h2>
+        <p>
+          Registramos tu pedido <strong id="confirmacion-numero"></strong>. Te
+          enviamos el resumen a <strong id="confirmacion-email"></strong>.
+        </p>
+        <a class="boton" href="index.html">Volver al inicio</a>
+      </section>
+    </main>
+
+    <footer class="pie-principal">
+      <p>PC Store - Hardware y tecnología</p>
+      <address>Córdoba Capital, Argentina</address>
+      <p>© 2026 PC Store</p>
+    </footer>
+  </body>
+</html>

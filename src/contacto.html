@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoctaTech - Contacto</title>
+    <link
+      rel="icon"
+      href="./resources/imagenes/brand/favicon/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      href="./resources/imagenes/brand/favicon/favicon.ico"
+      sizes="any"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./resources/imagenes/brand/favicon/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="./resources/css/estilos.css" />
+    <script type="module" src="./resources/js/index.js"></script>
+  </head>
+  <body>
+    <header class="encabezado-principal">
+      <a href="index.html">
+        <img
+          class="logo"
+          src="./resources/imagenes/brand/logo/doctatech-logo-fondo-claro.svg"
+          alt="Logo de DoctaTech"
+        />
+      </a>
+
+      <form class="buscador" role="search" aria-label="Buscar productos">
+        <input
+          type="search"
+          id="buscar-producto"
+          name="buscar"
+          placeholder="Ej.: mouse, teclado, monitor..."
+          autocomplete="off"
+          aria-label="Buscar producto"
+        />
+        <button class="buscador-boton" type="submit" aria-label="Buscar">
+          <svg
+            viewBox="0 0 24 24"
+            width="19"
+            height="19"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.8-3.8" />
+          </svg>
+        </button>
+      </form>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navegacion-principal" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+        <button
+          class="boton-carrito"
+          type="button"
+          data-abrir-carrito
+          aria-controls="panel-carrito"
+          aria-expanded="false"
+          aria-label="Abrir carrito"
+        >
+          <svg
+            class="icono-carrito"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="9" cy="21" r="1.6" />
+            <circle cx="19" cy="21" r="1.6" />
+            <path
+              d="M2 3h3l2.7 12.3a1.8 1.8 0 0 0 1.8 1.4h9.3a1.8 1.8 0 0 0 1.8-1.4L22 7H6"
+            />
+          </svg>
+          <span class="contador-carrito" id="contador-carrito" hidden>0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="contenido-principal">
+      <section class="seccion seccion-contacto">
+        <h1>Contacto</h1>
+        <p>
+          ¿Tenés alguna consulta sobre nuestros productos? Completá el
+          formulario y nos pondremos en contacto.
+        </p>
+
+        <form id="formulario-contacto" action="#" method="post">
+          <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </p>
+
+          <p>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required />
+          </p>
+
+          <p>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required />
+          </p>
+
+          <p>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" />
+          </p>
+
+          <p>
+            <label for="motivo">Motivo de contacto:</label>
+            <select id="motivo" name="motivo">
+              <option value="">Seleccionar</option>
+              <option value="producto">Consulta sobre un producto</option>
+              <option value="compra">Consulta sobre una compra</option>
+              <option value="garantia">Garantía</option>
+              <option value="otro">Otro</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>¿Qué tipo de producto te interesa?</legend>
+
+            <input
+              type="radio"
+              id="componentes"
+              name="tipoProducto"
+              value="componentes"
+            />
+            <label for="componentes">Componentes</label>
+
+            <input
+              type="radio"
+              id="perifericos"
+              name="tipoProducto"
+              value="perifericos"
+            />
+            <label for="perifericos">Periféricos</label>
+
+            <input
+              type="radio"
+              id="notebooks"
+              name="tipoProducto"
+              value="notebooks"
+            />
+            <label for="notebooks">Notebooks</label>
+          </fieldset>
+
+          <p>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+          </p>
+
+          <p>
+            <input type="checkbox" id="novedades" name="novedades" />
+            <label for="novedades">Quiero recibir novedades y ofertas</label>
+          </p>
+
+          <button type="submit">Enviar consulta</button>
+          <button type="reset">Limpiar formulario</button>
+          <p id="mensaje-confirmacion" hidden role="status">
+            Tu consulta fue enviada correctamente. Nos comunicaremos contigo a
+            la brevedad.
+          </p>
+        </form>
+      </section>
+
+      <section class="seccion">
+        <h2>Información de contacto</h2>
+        <address>
+          <p>Córdoba Capital, Argentina</p>
+          <p>Teléfono: 351-000-0000</p>
+          <p>Email: contacto@pcstore.com</p>
+        </address>
+      </section>
+    </main>
+
+    <footer class="pie-principal">
+      <p>PC Store - Hardware y tecnología</p>
+      <address>Córdoba Capital, Argentina</address>
+      <p>© 2026 PC Store</p>
+    </footer>
+
+    <div class="fondo-carrito" id="fondo-carrito"></div>
+
+    <aside
+      class="panel-carrito"
+      id="panel-carrito"
+      role="dialog"
+      aria-label="Carrito de compras"
+    >
+      <div class="panel-carrito-cabecera">
+        <h2>Tu carrito</h2>
+        <button
+          class="panel-carrito-cerrar"
+          type="button"
+          data-cerrar-carrito
+          aria-label="Cerrar carrito"
+        >
+          &#10005;
+        </button>
+      </div>
+
+      <p class="carrito-vacio" hidden>Tu carrito está vacío.</p>
+
+      <div class="contenedor-tabla-carrito">
+        <table class="tabla-carrito">
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Cant.</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-carrito-cuerpo"></tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" scope="row">Total</th>
+              <td><strong id="total-carrito">$0</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="resumen-carrito">
+        <p class="texto-total">Total de la compra</p>
+        <p class="importe-total">$0</p>
+      </div>
+
+      <div class="acciones-carrito">
+        <a
+          class="boton boton-secundario"
+          href="index.html#catalogo"
+          data-cerrar-carrito
+          >Seguir comprando</a
+        >
+        <button class="boton accion-finalizar" type="button">
+          Finalizar compra
+        </button>
+      </div>
+    </aside>
+  </body>
+</html>

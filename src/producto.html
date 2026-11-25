@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DoctaTech - Detalle de producto</title>
+
+    <link rel="icon" href="./resources/imagenes/brand/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./resources/imagenes/brand/favicon/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./resources/imagenes/brand/favicon/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./resources/css/estilos.css" />
+    <script type="module" src="./resources/js/index.js"></script>
+  </head>
+
+  <body>
+
+    <header class="encabezado-principal">
+      <a href="index.html">
+        <img class="logo" src="./resources/imagenes/brand/logo/doctatech-logo-fondo-claro.svg" alt="Logo de DoctaTech" />
+      </a>
+
+      <form class="buscador" role="search" aria-label="Buscar productos">
+        <input type="search" id="buscar-producto" name="buscar" placeholder="Ej.: mouse, teclado, monitor..." autocomplete="off" aria-label="Buscar producto" />
+        <button class="buscador-boton" type="submit" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.8-3.8" />
+          </svg>
+        </button>
+      </form>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navegacion-principal" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <button class="boton-carrito" type="button" data-abrir-carrito aria-controls="panel-carrito" aria-expanded="false" aria-label="Abrir carrito">
+          <svg class="icono-carrito" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1.6" />
+            <circle cx="19" cy="21" r="1.6" />
+            <path d="M2 3h3l2.7 12.3a1.8 1.8 0 0 0 1.8 1.4h9.3a1.8 1.8 0 0 0 1.8-1.4L22 7H6" />
+          </svg>
+          <span class="contador-carrito" id="contador-carrito" hidden>0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="contenido-principal">
+      <article class="detalle-producto">
+        <h1 id="nombre-producto">Producto</h1>
+
+        <img
+          id="imagen-producto"
+          src=""
+          alt=""
+        />
+
+        <p class="precio" id="precio-producto"></p>
+
+        <p>Stock disponible</p>
+
+        <section>
+          <h2>Descripción</h2>
+
+          <p id="descripcion-producto"></p>
+        </section>
+
+        <section>
+          <h2>Comprar producto</h2>
+
+          <form action="#" method="get">
+            <label for="cantidad"> Cantidad: </label>
+
+            <input
+              type="number"
+              id="cantidad"
+              name="cantidad"
+              min="1"
+              max="10"
+              value="1"
+            />
+
+            <button class="boton" type="submit">Agregar al carrito</button>
+          </form>
+        </section>
+
+        <div class="acciones-producto">
+          <a class="boton boton-secundario" href="index.html#catalogo"> Volver al catálogo </a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="pie-principal">
+      <p>PC Store - Hardware y tecnología</p>
+
+      <address>Córdoba Capital, Argentina</address>
+
+      <p>© 2026 PC Store</p>
+    </footer>
+
+    <div class="fondo-carrito" id="fondo-carrito"></div>
+
+    <aside class="panel-carrito" id="panel-carrito" role="dialog" aria-label="Carrito de compras">
+      <div class="panel-carrito-cabecera">
+        <h2>Tu carrito</h2>
+        <button class="panel-carrito-cerrar" type="button" data-cerrar-carrito aria-label="Cerrar carrito">&#10005;</button>
+      </div>
+
+      <p class="carrito-vacio" hidden>Tu carrito está vacío.</p>
+
+      <div class="contenedor-tabla-carrito">
+        <table class="tabla-carrito">
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Cant.</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-carrito-cuerpo"></tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" scope="row">Total</th>
+              <td><strong id="total-carrito">$0</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="resumen-carrito">
+        <p class="texto-total">Total de la compra</p>
+        <p class="importe-total">$0</p>
+      </div>
+
+      <div class="acciones-carrito">
+        <a class="boton boton-secundario" href="index.html#catalogo" data-cerrar-carrito>Seguir comprando</a>
+        <button class="boton accion-finalizar" type="button">Finalizar compra</button>
+      </div>
+    </aside>
+  </body>
+</html>

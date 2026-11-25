@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mouse Redragon K1ng 1k M724 12400dpi Blanco",
+        "precio": 25900,
+        "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_857792-MLA110113344886_042026-F.webp",
+        "descripcion": "Mouse gamer Redragon K1ng 1k M724 12400dpi Blanco, con sensor óptico de alta precisión y diseño ergonómico para largas sesiones de juego.",
+        "categoria": "Periféricos"
+    },
+    {
+        "id": 2,
+        "nombre": "Teclado Redragon K552 Kumara RGB Mecánico",
+        "precio": 49900,
+        "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_958438-MLA117000823232_102026-F.webp",
+        "descripcion": "Teclado mecánico Redragon K552 Kumara RGB, con retroiluminación RGB personalizable y switches mecánicos para una experiencia de escritura y juego superior.",
+        "categoria": "Periféricos"
+    },
+    {
+        "id": 3,
+        "nombre": "Auriculares Redragon H510 Zeus",
+        "precio": 39900,
+        "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_660245-MLA83496416270_042025-F.webp",
+        "descripcion": "Auriculares gaming Redragon H510 Zeus, con sonido envolvente y micrófono incorporado para una experiencia de juego inmersiva.",
+        "categoria": "Periféricos"
+    },
+    {
+        "id": 4,
+        "nombre": "Monitor Redragon 27\" Curvo 165Hz",
+        "precio": 89900,
+        "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_863415-MLA81835085441_012025-F.webp",
+        "descripcion": "Monitor gaming Redragon 27\" Curvo 165Hz, con alta resolución y tiempos de respuesta ultra rápidos para una experiencia de juego inmersiva.",
+        "categoria": "Monitores"
+    },
+    {
+        "id": 5,
+        "nombre": "Notebook Redragon G51",
+        "precio": 1290900,
+        "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_849336-MLA99458218708_112025-F.webp",
+        "descripcion": "Notebook gaming Redragon G51, con procesador de alto rendimiento y gráficos potentes para una experiencia de juego inmersiva.",
+        "categoria": "Notebooks"
+    },
+    {
+        "id": 6,
+        "nombre": "Silla Gamer Redragon Invader",
+        "precio": 159900,
+        "imagen": "./resources/imagenes/productos/D_NQ_NP_2X_870374-MLA95558806237_102025-F.webp",
+        "descripcion": "Silla gamer Redragon Invader, con diseño ergonómico y materiales de alta calidad para largas sesiones de juego cómodas.",
+        "categoria": "Sillas"
+    }
+]
